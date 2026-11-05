@@ -721,7 +721,7 @@ def cmd_apply(settings: dict) -> int:
     if behind > 0 and ahead > 0:
         return fail(
             "Repo diverged (local and remote have different commits). "
-            "Resolve in a terminal: cd " + str(repo) + " && git pull --rebase",
+            "Resolve the divergence in a terminal: " + str(repo),
             build_status(settings),
         )
 

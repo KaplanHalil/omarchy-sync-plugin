@@ -11,8 +11,8 @@ one machine, apply on another, and undo an apply with one click.
 Omarchy Sync is a minimal replacement for heavyweight dotfile synchronisers.
 It mirrors a small, explicit whitelist of `~/.config` files, keeps machine-local
 settings out of the repo, and never tries to merge two machines line by line.
-If the histories diverge, Apply stops and tells you the exact git command to
-run.
+If the histories diverge, Apply stops and asks you to resolve the divergence
+in a terminal.
 
 ## Features
 
@@ -31,7 +31,7 @@ run.
 - **Theme-aware UI.** The panel follows the active Omarchy theme, font and
   corner radius.
 - **Quiet by default.** No daemon, no telemetry, no outbound traffic except
-  `git fetch` / `git push` to the repository you configure.
+  the remote operations against the repository you configure.
 
 ## Requirements
 
@@ -155,8 +155,9 @@ State lives in `~/.local/share/omarchy-sync/` (settings and the repo clone) and
 whitelist is written without an explicit Apply.
 
 **Security:** the plugin runs as unsandboxed QML/Python code, like every
-Omarchy plugin. It never uses `sudo`, never downloads and executes remote
-scripts, and only talks to the git remote you configure. Keep the config
+Omarchy plugin. It runs with your user account and never asks for elevated
+privileges, never downloads and executes remote scripts, and only talks to the
+git remote you configure. Keep the config
 repository private: it contains your shell, Hyprland and terminal configs.
 
 ## Remove
