@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.kaplanhalil.sync",
+  "name": "Omarchy Sync",
+  "version": "1.0.0",
+  "author": "Halil Kaplan",
+  "license": "MIT",
+  "description": "Publish and apply your Omarchy config through a private git repo, with category filters, backups and undo.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Omarchy Sync",
+    "description": "Publish and apply Omarchy configs through a private git repo",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {},
+    "schema": []
+  }
+}
